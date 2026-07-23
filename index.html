@@ -4,10 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="19800">
-<title>Video Dashboard</title>
+<title>Premium Video Dashboard</title>
+<!-- Google Fonts laden: Playfair Display -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
 <style>
   body {
-    background-color: #f9f9f9;
+    background-color: #fcfcfc; /* Iets zachter wit */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,14 +31,17 @@
     padding: 20px;
   }
 
-  /* Grote digitale klok bovenaan */
+  /* Designer klok bovenaan */
   .clock {
-    font-family: 'Verdana', sans-serif;
-    font-size: 72px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
+    font-family: 'Playfair Display', serif; /* Serif font voor luxe uitstraling */
+    font-size: 80px; /* Iets groter */
+    font-weight: 400; /* Iets dunner is vaak chiquer dan bold */
+    color: #2c3e50; /* Chic donkergrijs/blauw */
+    margin-bottom: 50px; /* Meer ruimte onder de klok (staat hij optisch hoger) */
+    letter-spacing: 4px; /* Ruime spatiëring tussen de cijfers */
+    text-transform: uppercase;
+    /* Subtiele text-shadow voor diepte */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
   }
 
   /* De video wrapper (1020px max-width) */
@@ -42,9 +50,11 @@
     max-width: 1020px; 
     aspect-ratio: 16 / 9;
     background-color: #000;
-    border-radius: 15px;
+    border-radius: 8px; /* Iets strakker dan 15px */
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    /* Zachtere, grotere schaduw voor 'float' effect */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    border: 1px solid rgba(0,0,0,0.05); /* Heel dun lijntje eromheen */
   }
 
   .video-wrapper iframe {
@@ -53,23 +63,23 @@
     border: none;
   }
 
-  /* Welkomsttekst */
+  /* Welkomsttekst onderaan */
   .welcome-text {
-    margin-top: 30px; 
+    margin-top: 40px; 
     text-align: center;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.20); 
-    font-family: 'Verdana', sans-serif;
-    font-size: 29px;
+    font-family: 'Playfair Display', serif; /* Zelfde font familie */
+    font-size: 26px; /* Iets kleiner */
     color: #524e4e;
-    font-weight: bold;
-    letter-spacing: -1px;
+    font-weight: 400;
+    font-style: italic; /* Schuingedrukt voor elegantie */
+    letter-spacing: 0.5px;
   }
 </style>
 </head>
 <body>
 
 <div class="video-container">
-    <!-- Grote digitale klok -->
+    <!-- Designer digitale klok -->
     <div class="clock" id="clock">00:00</div>
 
     <div class="video-wrapper">
