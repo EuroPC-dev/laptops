@@ -4,11 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="19800">
-<title>Modern Dashboard</title>
-<!-- Google Fonts laden: Syne & Inter -->
+<title>Dashboard</title>
+
+<!-- Google Fonts: Inter voor de klok, Playfair Display voor de tekst onderaan -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
 
 <style>
   body {
@@ -21,7 +22,6 @@
     overflow: hidden;
   }
 
-  /* Container voor de klok, video en de tekst */
   .video-container {
     width: 100%;
     display: flex;
@@ -31,19 +31,23 @@
     padding: 20px;
   }
 
-  /* Strakke, brede moderne klok */
+  /* Klok: lichte dikte, hoger op de pagina geplaatst */
   .clock {
-    font-family: 'Syne', sans-serif; /* Modern, breed sans-serif font */
-    font-size: 85px; 
-    font-weight: 800; /* Extra dik */
-    color: #111111; /* Diep, strak zwart */
-    margin-bottom: 60px; /* Iets hoger geplaatst boven de video */
-    letter-spacing: 12px; /* Veel ruimte tussen cijfers voor een breder effect */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 140px; 
+    font-weight: 300; /* Dikte weer teruggezet naar dun/strak */
+    color: #22252a; 
+    letter-spacing: -2px; 
+    margin-top: -60px; /* Trekt de klok naar boven */
+    margin-bottom: 10px; /* Voorkomt dat de video mee omhoog schuift */
     line-height: 1;
-    transform: scaleX(1.1); /* Maakt de tekst nog eens 10% breder */
+    font-variant-numeric: tabular-nums; 
+    
+    text-shadow: 
+      0 4px 12px rgba(0, 0, 0, 0.08),
+      0 1px 2px rgba(0, 0, 0, 0.05);
   }
 
-  /* De video wrapper (1020px max-width) */
   .video-wrapper {
     width: 100%;
     max-width: 1020px; 
@@ -60,27 +64,24 @@
     border: none;
   }
 
-  /* Welkomsttekst onderaan */
   .welcome-text {
-    margin-top: 40px; 
+    margin-top: 35px; 
     text-align: center;
-    font-family: 'Inter', sans-serif; /* Strakke moderne sans-serif */
-    font-size: 24px; 
-    color: #333333;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase; /* Zorgt voor een strakke, moderne uitstraling */
+    font-family: 'Playfair Display', serif;
+    font-size: 26px; 
+    color: #524e4e;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.5px;
   }
 </style>
 </head>
 <body>
 
 <div class="video-container">
-    <!-- Strakke, brede klok -->
     <div class="clock" id="clock">00:00</div>
 
     <div class="video-wrapper">
-        <!-- YouTube video -->
         <iframe 
             src="https://www.youtube-nocookie.com/embed/videoseries?list=PLeZLvM17wCjE&autoplay=1&mute=1&loop=1&playlist=PLeZLvM17wCjE" 
             allow="autoplay; encrypted-media" 
@@ -101,7 +102,6 @@
     document.getElementById('clock').textContent = `${hours}:${minutes}`;
   }
 
-  // Update de tijd direct en daarna elke seconde
   updateClock();
   setInterval(updateClock, 1000);
 </script>
