@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="19800">
-<title>Premium Video Dashboard</title>
-<!-- Google Fonts laden: Playfair Display -->
+<title>Modern Dashboard</title>
+<!-- Google Fonts laden: Syne & Inter -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 
 <style>
   body {
-    background-color: #fcfcfc; /* Iets zachter wit */
+    background-color: #f8f9fa;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,17 +31,16 @@
     padding: 20px;
   }
 
-  /* Designer klok bovenaan */
+  /* Strakke, brede moderne klok */
   .clock {
-    font-family: 'Playfair Display', serif; /* Serif font voor luxe uitstraling */
-    font-size: 80px; /* Iets groter */
-    font-weight: 400; /* Iets dunner is vaak chiquer dan bold */
-    color: #2c3e50; /* Chic donkergrijs/blauw */
-    margin-bottom: 50px; /* Meer ruimte onder de klok (staat hij optisch hoger) */
-    letter-spacing: 4px; /* Ruime spatiëring tussen de cijfers */
-    text-transform: uppercase;
-    /* Subtiele text-shadow voor diepte */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    font-family: 'Syne', sans-serif; /* Modern, breed sans-serif font */
+    font-size: 85px; 
+    font-weight: 800; /* Extra dik */
+    color: #111111; /* Diep, strak zwart */
+    margin-bottom: 60px; /* Iets hoger geplaatst boven de video */
+    letter-spacing: 12px; /* Veel ruimte tussen cijfers voor een breder effect */
+    line-height: 1;
+    transform: scaleX(1.1); /* Maakt de tekst nog eens 10% breder */
   }
 
   /* De video wrapper (1020px max-width) */
@@ -50,11 +49,9 @@
     max-width: 1020px; 
     aspect-ratio: 16 / 9;
     background-color: #000;
-    border-radius: 8px; /* Iets strakker dan 15px */
+    border-radius: 12px; 
     overflow: hidden;
-    /* Zachtere, grotere schaduw voor 'float' effect */
-    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-    border: 1px solid rgba(0,0,0,0.05); /* Heel dun lijntje eromheen */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
   }
 
   .video-wrapper iframe {
@@ -67,19 +64,19 @@
   .welcome-text {
     margin-top: 40px; 
     text-align: center;
-    font-family: 'Playfair Display', serif; /* Zelfde font familie */
-    font-size: 26px; /* Iets kleiner */
-    color: #524e4e;
-    font-weight: 400;
-    font-style: italic; /* Schuingedrukt voor elegantie */
-    letter-spacing: 0.5px;
+    font-family: 'Inter', sans-serif; /* Strakke moderne sans-serif */
+    font-size: 24px; 
+    color: #333333;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase; /* Zorgt voor een strakke, moderne uitstraling */
   }
 </style>
 </head>
 <body>
 
 <div class="video-container">
-    <!-- Designer digitale klok -->
+    <!-- Strakke, brede klok -->
     <div class="clock" id="clock">00:00</div>
 
     <div class="video-wrapper">
